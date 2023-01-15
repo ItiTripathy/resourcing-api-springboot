@@ -1,7 +1,7 @@
 package io.nology.resourceapi.job;
 
 import java.time.LocalDate;
-import java.util.List;
+
 import java.util.Optional;
 
 import javax.transaction.Transactional;
@@ -28,7 +28,7 @@ public class JobService {
 	
 
 	public Job create(@Valid JobCreateDTO data) {
-		 Long tempId = data.getTempId();
+		    Long tempId = data.getTempId();
 		    String name = data.getName();
 		    LocalDate startDate = data.getStartDate();
 		    LocalDate endDate = data.getEndDate();

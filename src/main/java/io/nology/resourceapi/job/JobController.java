@@ -1,6 +1,6 @@
 package io.nology.resourceapi.job;
 
-import java.util.List;
+
 
 import javax.validation.Valid;
 
