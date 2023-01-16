@@ -44,7 +44,7 @@ public class TempController {
 		Optional<Temp> maybeTemp = this.tempService.findById(id);
 		
 		if(maybeTemp.isEmpty()) {
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "no temp");
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No Temp");
 		}
 		
 		return new ResponseEntity<>(maybeTemp.get(), HttpStatus.OK);

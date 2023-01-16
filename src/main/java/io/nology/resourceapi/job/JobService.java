@@ -60,5 +60,10 @@ public class JobService {
 			
 	}
 	
+	public Optional<Job> findById(Long id) {
+		
+	    return this.jobRepository.findById(id);
+	}
+	
 
 }
