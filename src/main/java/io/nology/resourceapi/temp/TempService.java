@@ -37,5 +37,21 @@ public class TempService {
 		
 	    return this.tempRepository.findById(id);
 	}
+	
+	public Temp update(Long TempId, TempUpdateDTO data) {
+        Temp Temp = this.findById(TempId).get();
+
+        if (data.firstName != null) {
+            String cleanedFirstName = data.firstName.trim();
+            Temp.setFirstName(cleanedFirstName);
+        }
+
+        if (data.lastName != null) {
+            String cleanedLastName = data.lastName.trim();
+            Temp.setLastName(cleanedLastName);
+        }
+
+        return this.tempRepository.save(Temp);
+    }
 
 }
